@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'toDoListApp';
+  title = 'To-Do List';
+  //item:string;
+  itemsArray = [];
+  
+  constructor (){ }
+
+  addItem(item:string){
+    this.itemsArray.push(item)
+  }
+
+  deleteItem(){
+    
+  }
 }
