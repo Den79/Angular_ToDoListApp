@@ -1,10 +1,18 @@
 <div class="app">
   <h1>{{title}}</h1>
 
-  <input type="text" [(ngModel)]="inputItem">
-  <input type="button" value="add" (click)="addItem(inputItem)">
+  <form #inputForm="ngForm">
+    <input type="text" minlength="1" required
+    [(ngModel)]="inputItem" name="to_do_list_input_form">
+    <input type="button" value="add" 
+    [disabled]="!inputForm.form.valid" (click)="addItem(inputItem)">
+  </form>
 
   <ul>
-    <li *ngFor="let item of itemsArray">{{item}}</li>
+    <div class="itemRow" *ngFor="let item of itemsArray; let index = index">
+      <input type="button" value="X" (click)="deleteItem(index)">
+      <li>{{item}}</li>
+    </div>
   </ul>
+  <input type="button" value="Clear the List" (click)="deleteAllItems()">
 </div>

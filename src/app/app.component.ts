@@ -10,13 +10,18 @@ export class AppComponent {
   //item:string;
   itemsArray = [];
   
-  constructor (){ }
+  //constructor (){ }
 
   addItem(item:string){
     this.itemsArray.push(item)
   }
 
-  deleteItem(){
-    
+  deleteItem(index){
+    //console.log(index)
+    this.itemsArray.splice(index, 1);
+  }
+
+  deleteAllItems(){
+    this.itemsArray = [];
   }
 }

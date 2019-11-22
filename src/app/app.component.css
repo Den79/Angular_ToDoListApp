@@ -3,3 +3,11 @@
     width: 600px;
     background-color: rgb(151, 243, 151);
 }
+.itemRow {
+    display: flex;
+    list-style: none;
+    margin: 5px 0;
+}
+.itemRow li {
+    padding-left: 5px;
+}
