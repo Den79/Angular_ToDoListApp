@@ -11,7 +11,7 @@
   <ul>
     <div class="itemRow" *ngFor="let item of itemsArray; let index = index">
       <input type="button" value="X" (click)="deleteItem(index)">
-      <li>{{item}}</li>
+      <li [crossedOut]>{{item}}</li>
     </div>
   </ul>
   <input type="button" value="Clear the List" (click)="deleteAllItems()">
