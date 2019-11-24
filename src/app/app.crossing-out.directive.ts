@@ -26,8 +26,6 @@ export class CrossingOutDirective{
             this.crossedOutStyle = "line-through"
             this.el.nativeElement.style.textDecoration = "line-through"
         }
-        
-        //this.el.nativeElement.style.textDecoration = style;
-        console.log( this.el.nativeElement.style.textDecoration);
+
     }
 }
