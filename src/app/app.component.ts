@@ -7,17 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To-Do List';
-  //item:string;
   itemsArray = [];
   
-  //constructor (){ }
+  // My style for H1 element
+  titleStyle = {
+    'font-family':'"Wendy One", sans-serif',  
+    'font-size':'4.5em'
+  }
 
   addItem(item:string){
     this.itemsArray.push(item)
   }
 
   deleteItem(index){
-    //console.log(index)
     this.itemsArray.splice(index, 1);
   }
 

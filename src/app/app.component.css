@@ -1,14 +1,15 @@
-h1 {
+/* h1 {
     font-family: 'Wendy One', sans-serif;
     font-size: 4.5em;
-}
+} */
+
 button {
     font-family: 'Wendy One', sans-serif;
     font-size: 1.5em;
  }
 
 p {
-    font-size: 1.4em;
+    font-size: 1.3em;
     padding: 0;
     margin: 0;
 }

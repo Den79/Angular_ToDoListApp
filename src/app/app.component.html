@@ -1,10 +1,10 @@
-<div class="card bg-light mb-3">
+<div class="card bg-light">
   <div class="card-header" >
-    <h1>{{title}}</h1>
+    <h1 [ngStyle]="titleStyle">{{title}}</h1>
   </div>
 
   <form class="form-inline" #inputForm="ngForm">
-    <div class="form-group mx-sm-2 mb-2">
+    <div class="form-group mx-sm mb-2">
       <input 
         class="form-control"
         type="text" 

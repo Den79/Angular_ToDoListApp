@@ -20,11 +20,15 @@ export class CrossingOutDirective{
 
         if (this.crossedOutStyle == "line-through") {
             this.crossedOutStyle = "none"
+            this.el.nativeElement.style = "color: black; font-weight: none;"
             this.el.nativeElement.style.textDecoration = "none"
+            
         } else if ( (this.crossedOutStyle == null) ||
                     (this.crossedOutStyle == "none") ) {
             this.crossedOutStyle = "line-through"
+            this.el.nativeElement.style = "color: crimson; font-weight: bold;"
             this.el.nativeElement.style.textDecoration = "line-through"
+            
         }
 
     }
