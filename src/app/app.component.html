@@ -1,18 +1,47 @@
-<div class="app">
-  <h1>{{title}}</h1>
+<div class="card bg-light mb-3">
+  <div class="card-header" >
+    <h1>{{title}}</h1>
+  </div>
 
-  <form #inputForm="ngForm">
-    <input type="text" minlength="1" required
-    [(ngModel)]="inputItem" name="to_do_list_input_form">
-    <input type="button" value="add" 
-    [disabled]="!inputForm.form.valid" (click)="addItem(inputItem)">
+  <form class="form-inline" #inputForm="ngForm">
+    <div class="form-group mx-sm-2 mb-2">
+      <input 
+        class="form-control"
+        type="text" 
+        minlength="1" 
+        required
+        placeholder="... type your task here ..."
+        [(ngModel)]="inputItem" 
+        name="to_do_list_input_form"
+      >
+    </div>  
+
+    <button  
+      type="submit" 
+      class="btn btn-primary mb-2" 
+      [disabled]="!inputForm.form.valid" (click)="addItem(inputItem)">
+      Add task
+    </button>
   </form>
 
-  <ul>
-    <div class="itemRow" *ngFor="let item of itemsArray; let index = index">
-      <input type="button" value="X" (click)="deleteItem(index)">
-      <li [crossedOut]>{{item}}</li>
+  <ul class="card-body">
+    <div class="form-inline" *ngFor="let item of itemsArray; let index = index">
+      <li class="list-group-item">
+        <p class="card-text" [crossedOut]>{{item}} </p>
+        <button
+            type="submit"
+            class="btn btn-outline-danger"
+            (click)="deleteItem(index)">
+            X
+        </button>
+      </li>
     </div>
   </ul>
-  <input type="button" value="Clear the List" (click)="deleteAllItems()">
+  <button
+   type="submit" 
+   class="btn btn-primary mb-2 btn-lg"
+   (click)="deleteAllItems()">
+   Clear the list
+   </button>
+
 </div>

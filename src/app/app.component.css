@@ -1,13 +1,32 @@
-.app {
+h1 {
+    font-family: 'Wendy One', sans-serif;
+    font-size: 4.5em;
+}
+button {
+    font-family: 'Wendy One', sans-serif;
+    font-size: 1.5em;
+ }
+
+p {
+    font-size: 1.4em;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    padding: 20px;
+}
+
+.card {
     margin: 0 auto;
-    width: 600px;
-    background-color: rgb(151, 243, 151);
+    max-width: 600px;
+    border: 1px dotted grey;
+    text-align: center;
 }
-.itemRow {
+.list-group-item {
+    width: 100%;
     display: flex;
-    list-style: none;
-    margin: 5px 0;
-}
-.itemRow li {
-    padding-left: 5px;
+    justify-content: space-between;
+    padding: 5px 30px;
+    margin: 5px;
 }
