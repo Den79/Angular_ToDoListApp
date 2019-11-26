@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To-Do List';
+  //item = {content:"", crossedOut:false};
   itemsArray = [];
   
   // My style for H1 element
@@ -15,8 +16,11 @@ export class AppComponent {
     'font-size':'4.5em'
   }
 
-  addItem(item:string){
+  addItem(content:string){
+    var item = {content, crossedOut:false};
+    //this.item.[name] = item;
     this.itemsArray.push(item)
+
   }
 
   deleteItem(index){

@@ -27,7 +27,7 @@
   <ul class="card-body">
     <div class="form-inline" *ngFor="let item of itemsArray; let index = index">
       <li class="list-group-item">
-        <p class="card-text" [crossedOut]>{{item}} </p>
+        <p class="card-text" [crossedOut]>{{item.content}} </p>
         <button
             type="submit"
             class="btn btn-outline-danger"
